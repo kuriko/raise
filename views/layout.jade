@@ -5,14 +5,37 @@ html
 			if title
 				title= title
 		block css
+			link(rel="stylesheet"  href="/assets/bootstrap/css/bootstrap.min.css")
 			link(rel='stylesheet', href='/stylesheets/style.css')
 
 		block scripts
 			script(type='text/javascript', src='/assets/jquery-2.0.2.js')
 	body
-		block headContents
+
+		// header
+		div(class="navbar-wrapper")
+			div(class="navbar navbar-inverse navbar-static-top" role="navigation")
+				div(class="navbar-header")
+					a(id="home" class="navbar-brand" href="#") Poker Live!
 
 		block content
+
+		// footer
+		div(id="footer_contents" style="clear:both;")
+			footer
+				hr(class="featurette-divider")
+				div(style="float:left")
+					a(href="https://twitter.com/share" class="twitter-share-button") Tweet
+				div
+				p(class="pull-right")
+					a(href="#") Back to top
+				p
+					text &copy; 2014-2015 DWPC Tech. &middot;
+					a(href="#") Privacy
+					text &middot;
+					a(href="#") Terms
+					text &middot;
+
 		block afterScripts
 		block backGround
 			script.
@@ -23,5 +46,3 @@ html
 
 				ga('create', 'UA-55381205-1', 'auto');
 				ga('send', 'pageview');
-
-
